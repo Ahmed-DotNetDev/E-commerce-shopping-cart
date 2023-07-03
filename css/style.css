@@ -12,6 +12,15 @@ body {
     font-family: 'Oswald', sans-serif;
     background-color: #152733;
 }
+.fa-heart{
+    color: #037c07;
+    font-size: 27px;
+}
+.fa-heart:hover{
+    cursor: pointer;
+    color: #0edf15;
+    transition: .2s ease-in-out;
+}
 
 /* Header */
 .container {

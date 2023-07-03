@@ -71,7 +71,7 @@ function drawUIProducts() {
                     </div>
                     <div class="product-item-actions">
                         <button class="add-to-cart" onClick="checkLogin()" >Add To Cart</button>
-                        <i class="favorite fa-solid fa-cart-plus" onClick="checkLogin()"></i>
+                        <i class="fa-solid fa-heart" onClick="checkLogin()"></i>
                     </div>
                 </div>
         `

@@ -6,7 +6,9 @@ let sign_in = document.getElementById("sign-in");
 let getuser = localStorage.getItem("Username");
 let getpassword = localStorage.getItem("Password");
 
-sign_in.addEventListener('click', function (e) {
+sign_in.addEventListener('click',LoginFunction)
+
+function LoginFunction(e){
     e.preventDefault();
     if (username.value === "" || password.value === "") {
         alert("Fill Inputs Please!...");
@@ -19,4 +21,4 @@ sign_in.addEventListener('click', function (e) {
     else {
         alert("Wrong Username Or Password!...");
     }
-});
+}
