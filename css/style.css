@@ -12,11 +12,13 @@ body {
     font-family: 'Oswald', sans-serif;
     background-color: #152733;
 }
-.fa-heart{
+
+.fa-heart {
     color: #037c07;
     font-size: 27px;
 }
-.fa-heart:hover{
+
+.fa-heart:hover {
     cursor: pointer;
     color: #0edf15;
     transition: .2s ease-in-out;
@@ -173,7 +175,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
 .product-item .add-to-cart {
@@ -190,7 +191,6 @@ header {
     cursor: pointer;
 }
 
-
 .product-item .add-to-cart:hover {
     background-color: rgb(5, 160, 5);
     transition: .1s ease-in-out;
@@ -200,6 +200,9 @@ header {
     font-size: 30px;
     color: #537a9c;
     cursor: pointer;
+    display: block;
+    margin-left: auto;
+    width: 40px;
 }
 
 .product-item-actions .favorite:hover {
