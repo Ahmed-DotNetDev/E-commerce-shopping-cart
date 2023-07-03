@@ -21,13 +21,14 @@ if (username) {
     user.innerHTML = "Hi, " + username;
 }
 
-logout.addEventListener('click', function () {
+//clear storage
+logout.addEventListener('click', ClearFunction);
+function ClearFunction() {
     localStorage.clear();
     setTimeout(() => {
         window.location.href = "register.html";
     }, 1500);
-});
-
+}
 // ***********************************Define products as object
 
 let products = [

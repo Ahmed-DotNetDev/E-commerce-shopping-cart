@@ -4,7 +4,9 @@ let email = document.getElementById("email");
 let password = document.getElementById("password");
 let register_btn = document.getElementById("sign_up");
 
-register_btn.addEventListener('click', function (e) {
+register_btn.addEventListener('click', RegisterFunction);
+// register function
+function RegisterFunction(e) {
     e.preventDefault();
     if (username.value === "" || email.value === "" || password.value === "") {
         alert("Fill Inputs Please!...");
@@ -17,4 +19,4 @@ register_btn.addEventListener('click', function (e) {
             window.location.href = "login.html";
         }, 1500);
     }
-});
+}
