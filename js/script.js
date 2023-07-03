@@ -84,13 +84,14 @@ drawUIProducts();
 
 // ***********************************If click on product and he/she not register 
 function checkLogin() {
-    if (localStorage.getItem("Username") === null) {
-        setInterval((e) => {
-            window.location.href = "login.html";
-        }, 1000);
+    if (localStorage.getItem("Username")) {
+       
+            //window.location = 'cartproducts.html';
+            console.log("Add to cart");
+        
     }
     else {
-        window.Location.href = "register.html";
+        window.location = 'login.html';
     }
 }
 
