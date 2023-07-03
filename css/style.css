@@ -250,3 +250,44 @@ header {
     text-decoration: 0;
     color: #0088ff;
 }
+
+#user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info-cart-push,
+.user-info-cart-badge {
+    color: #0088ff;
+    outline: none;
+    font-size: 35px;
+    margin-right: 14px;
+}
+
+.user-info-cart-badge {
+    font-size: 20px;
+    margin-right: 20px;
+    display: block;
+    background: #d60d0d;
+    border-radius: 2px;
+    text-align: center;
+    width: 1.4rem;
+    height: 1.8rem;
+    color: black;
+
+}
+
+.user-info-buy {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-info-cart-push:hover {
+    text-shadow: 3px 3px black;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+}
+
+.user-info-cart-badge:hover {
+    cursor: pointer;
+}

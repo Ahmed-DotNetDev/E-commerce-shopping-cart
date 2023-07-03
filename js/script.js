@@ -71,7 +71,7 @@ function drawUIProducts() {
                         <span>Size : ${item.size}</span>
                     </div>
                     <div class="product-item-actions">
-                        <button class="add-to-cart" onClick="checkLogin()" >Add To Cart</button>
+                        <button class="add-to-cart" onClick="AddedToCart(${item.id})" >Add To Cart</button>
                         <i class="fa-solid fa-heart favorite" onClick="checkLogin()"></i>
                     </div>
                 </div>
@@ -85,14 +85,19 @@ drawUIProducts();
 // ***********************************If click on product and he/she not register 
 function checkLogin() {
     if (localStorage.getItem("Username")) {
-       
-            //window.location = 'cartproducts.html';
-            console.log("Add to cart");
-        
+
+        //window.location = 'cartproducts.html';
+        console.log("Add to cart");
+
     }
     else {
         window.location = 'login.html';
     }
 }
 
+function AddedToCart(id) {
+    let ChoosenItem = products.find((item) => item.id === id);
+    console.log(typeof ChoosenItem);
+    console.log(ChoosenItem);
 
+}
