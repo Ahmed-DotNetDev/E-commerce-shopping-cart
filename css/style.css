@@ -71,7 +71,7 @@ header {
     font-size: 20px;
     font-weight: 800;
     min-width: 120px;
-    margin-left: 65px;
+    margin-left: 10px;
 }
 
 .nav-items ul li a:hover {
@@ -267,7 +267,6 @@ header {
 .user-info-cart-badge {
     font-size: 17px;
     margin-right: 20px;
-    display: block;
     background: #d60d0d;
     border-radius: 9999px;
     text-align: center;
@@ -276,6 +275,7 @@ header {
     color: #000000;
     margin-top: -15px;
     margin-left: -13px;
+    display: none;
 }
 
 .user-info-buy {
@@ -305,6 +305,7 @@ header {
     padding: 10px;
     border-radius: 5px;
     display: none;
+    background-color: #ece3e32f;
 }
 
 .go-products {

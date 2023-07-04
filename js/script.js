@@ -60,7 +60,8 @@ let products = [
 
 // ***********************************display products
 let domofproducts = document.querySelector(".products");
-let cartProductDom=document.querySelector('.cart-products div')
+let cartProductDom = document.querySelector('.cart-products div')
+let BadgeProductDom = document.querySelector('.user-info-cart-badge')
 function drawUIProducts() {
     let productUi = products.map((item) => {
         return `
@@ -95,16 +96,28 @@ function checkLogin() {
         window.location = 'login.html';
     }
 }
-
+let counter = 1;
 function AddedToCart(id) {
     let ChoosenItem = products.find((item) => item.id === id);
-   cartProductDom.innerHTML+=`<p>${ChoosenItem.title}</p>`
+    cartProductDom.innerHTML += `<p>${ChoosenItem.title}</p>`
+    BadgeProductDom.style.display = 'block';
+    BadgeProductDom.innerHTML = counter;
+    counter++;
+
 
 }
 
 
 //test
-let cartProduct=document.querySelector('.cart-products');
-function ShowProductItems(){
-cartProduct.style.display='block';
+let cartProduct = document.querySelector('.cart-products');
+function ShowProductItems() {
+    if (cartProduct.innerHTML != '') {
+        if (cartProduct.style.display == 'block') {
+            cartProduct.style.display = 'none';
+        }
+        else {
+            cartProduct.style.display = 'block';
+
+        }
+    }
 }
