@@ -28,8 +28,13 @@
                     <ul id="user-info">
                         <li><a href="#" id="user"></a></li>
                        <div class="user-info-buy">
-                         <li><i class="fa-solid fa-cart-plus user-info-cart-push"></i></li>
+                         <li><i class="fa-solid fa-cart-plus user-info-cart-push" id="cart-push" onclick="ShowProductItems()"></i></li>
                          <span class="user-info-cart-badge">1</span>
+                       </div>
+                       <div class="cart-products">
+                        <p class="cart-products-name">Item Name</p>
+                        <div id="temp"></div>
+                        <a href="cartproducts.html" class="go-products">View All Products</a>
                        </div>
                         <li><a href="#" id="logout">Logout</a></li>
                     </ul>

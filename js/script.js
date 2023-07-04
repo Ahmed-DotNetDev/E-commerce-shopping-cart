@@ -60,6 +60,7 @@ let products = [
 
 // ***********************************display products
 let domofproducts = document.querySelector(".products");
+let cartProductDom=document.querySelector('.cart-products div')
 function drawUIProducts() {
     let productUi = products.map((item) => {
         return `
@@ -97,7 +98,13 @@ function checkLogin() {
 
 function AddedToCart(id) {
     let ChoosenItem = products.find((item) => item.id === id);
-    console.log(typeof ChoosenItem);
-    console.log(ChoosenItem);
+   cartProductDom.innerHTML+=`<p>${ChoosenItem.title}</p>`
 
+}
+
+
+//test
+let cartProduct=document.querySelector('.cart-products');
+function ShowProductItems(){
+cartProduct.style.display='block';
 }
