@@ -1,17 +1,16 @@
-//Current Page
-// let currentUrl = window.location.href;
-// console.log(currentUrl);
-
-// if(currentUrl== "http://127.0.0.1:5500/register.html"){
-// document.getElementById("sgnp").style.color="red";
-// }
 
 // ***********************************Show user info or clear it  
 let userinfo = document.getElementById("user-info");//should be shown
 let links = document.getElementById("links");//should be hidden
 let user = document.getElementById("user");
 let logout = document.getElementById("logout");
-
+//Handle icon buy
+if (localStorage.getItem("Username")) {
+    console.log("test");
+}
+else {
+    document.getElementById('cart-push').style.display = 'none';
+}
 let username = localStorage.getItem("Username");
 
 if (username) {
@@ -21,7 +20,6 @@ if (username) {
     user.innerHTML = "Hi, " + username;
 }
 
-//clear storage
 logout.addEventListener('click', ClearFunction);
 function ClearFunction() {
     localStorage.clear();
@@ -29,7 +27,6 @@ function ClearFunction() {
         window.location.href = "register.html";
     }, 1500);
 }
-// ***********************************Define products as object
 
 let products = [
     {
@@ -58,7 +55,6 @@ let products = [
     },
 ]
 
-// ***********************************display products
 let domofproducts = document.querySelector(".products");
 let cartProductDom = document.querySelector('.cart-products div')
 let BadgeProductDom = document.querySelector('.user-info-cart-badge')
@@ -84,31 +80,23 @@ function drawUIProducts() {
 
 drawUIProducts();
 
-// ***********************************If click on product and he/she not register 
-function checkLogin() {
+let counter = 1;
+let AddedItems = [];
+function AddedToCart(id) {
     if (localStorage.getItem("Username")) {
-
-        //window.location = 'cartproducts.html';
-        console.log("Add to cart");
-
+        let ChoosenItem = products.find((item) => item.id === id);
+        cartProductDom.innerHTML += `<p>${ChoosenItem.title}</p>`
+        BadgeProductDom.style.display = 'block';
+        BadgeProductDom.innerHTML = counter;
+        counter++;
+        AddedItems = [...AddedItems, ChoosenItem];
+        localStorage.setItem('ProductsInCart',JSON.stringify(AddedItems));
     }
     else {
         window.location = 'login.html';
     }
 }
-let counter = 1;
-function AddedToCart(id) {
-    let ChoosenItem = products.find((item) => item.id === id);
-    cartProductDom.innerHTML += `<p>${ChoosenItem.title}</p>`
-    BadgeProductDom.style.display = 'block';
-    BadgeProductDom.innerHTML = counter;
-    counter++;
 
-
-}
-
-
-//test
 let cartProduct = document.querySelector('.cart-products');
 function ShowProductItems() {
     if (cartProduct.innerHTML != '') {
@@ -117,7 +105,6 @@ function ShowProductItems() {
         }
         else {
             cartProduct.style.display = 'block';
-
         }
     }
 }
