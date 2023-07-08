@@ -259,19 +259,19 @@ header {
 
 .user-info-cart-push,
 .user-info-cart-badge {
-    color: #0088ff;
+    color: #fff;
     outline: none;
-    font-size: 35px;
+    font-size: 23px;
 }
 
 .user-info-cart-badge {
-    font-size: 17px;
+    font-size: 13px;
     margin-right: 20px;
     background: #d60d0d;
     border-radius: 9999px;
     text-align: center;
     width: 1.3rem;
-    height: 1.5rem;
+    height: 1.3rem;
     color: #000000;
     margin-top: -15px;
     margin-left: -13px;
